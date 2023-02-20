@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register Page</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body onload=" alert('Fill this form to continue')">
+    <div class="regmain">
+    <div id="container">
+        <h1>Register</h1>
+        <form>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" onkeyup="keyupFunction()" onkeydown="keydownFunction()">
+            <br>
+            <label for="password">Password:</label>
+            <input type="text" id="password" onkeyup="replaceWithHash(this)"  >           <br>
+            <label for="gender">Gender:</label>
+            <div id="gender-field">
+                <input type="radio" id="gender-male" name="gender" value="male">
+                <label for="gender-male">Male</label>
+                <input type="radio" id="gender-female" name="gender" value="female">
+                <label for="gender-female">Female</label>
+                <input type="radio" id="gender-other" name="gender" value="other">
+                <label for="gender-other">Other</label>
+            </div>
+            <br>
+            <label for="colour-pallet">Choose your color:</label>
+            <input type="color" id="color">
+            <label for="date-of-birth">Date of Birth:</label>
+            <input type="date" id="date-of-birth" onchange="calculateAge()">
+            <br>
+            <label for="age">Age:</label>
+            <input type="text" id="age" readonly>
+            <br>
+            <div id="additional-field" style="display: none; margin: auto;">
+                <input type="checkbox" id="disability-1" value="disability-1" style="margin: 0px 0px 0px 0px;">
+                <label for="disability-1" style="margin: 0px 20px 0px 3px;">Can you hear</label>
+                <br>
+                <input type="checkbox" id="disability-2" value="disability-2" style="margin: 0px 0px 0px 0px;">
+                <label for="disability-2" style="margin: 0px 20px 0px 3px;">Can you see</label>
+                <br>
+                <input type="checkbox" id="disability-3" value="disability-3" style="margin: 0px 0px 0px 0px;">
+                <label for="disability-3" style="margin: 0px 20px 0px 3px;">Can you talk</label>
+                <br>
+            </div>
+            <label for="country">Country:</label>
+            <input type="text" id="country" list="countries">
+            <datalist id="countries">
+                <option value="India">
+                <option value="America">
+                <option value="Spain">
+                <option value="Africa">
+                <option value="Japan"> 
+            </datalist>
+
+            <br>
+            <label for="phone">Phone number:</label>
+            <input type="text" id="phone" name="phone">
+            <br>
+            <input class="regbut" type="submit" value="Submit" onclick="Submit()">
+        </form>
+    </div>
+</div>
+    <script src="script.js" type="text/javascript"></script>
+</body>
+
+</html>
